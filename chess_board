@@ -1,0 +1,17 @@
+from graphics import *
+win = GraphWin("Chess Board", 400, 400)
+
+win = GraphWin("Checkerboard", 200,200)
+xVal = [0, 25, 50, 75, 100, 125, 150, 175]
+yVal = [0, 25, 50, 75, 100, 125, 150, 175]
+for i in xVal:
+  for j in yVal:
+    if (i+j)%50 == 0:
+      rect = Rectangle(Point(i,j), Point(i+25,j+25))
+      rect.setFill("White")
+      rect.draw(win)
+    if (i+j)%50 == 25:
+      rect = Rectangle(Point(i,j), Point(i+25,j+25))
+      rect.setFill("Black")
+      rect.draw(win)
+      
